@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataJuicerPipelineJobFacet",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "_producer": {
+      "type": "string"
+    },
+    "_schemaURL": {
+      "type": "string"
+    },
+    "projectName": {
+      "type": ["string", "null"]
+    },
+    "executorType": {
+      "type": ["string", "null"]
+    },
+    "configPath": {
+      "type": ["string", "null"]
+    },
+    "numOperators": {
+      "type": ["integer", "null"]
+    },
+    "recipeHash": {
+      "type": ["string", "null"]
+    },
+    "recipe": {
+      "type": ["object", "array", "null"]
+    },
+    "operatorNames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dag": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

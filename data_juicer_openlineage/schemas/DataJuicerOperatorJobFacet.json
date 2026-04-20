@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataJuicerOperatorJobFacet",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "_producer": {
+      "type": "string"
+    },
+    "_schemaURL": {
+      "type": "string"
+    },
+    "projectName": {
+      "type": ["string", "null"]
+    },
+    "executorType": {
+      "type": ["string", "null"]
+    },
+    "configPath": {
+      "type": ["string", "null"]
+    },
+    "opName": {
+      "type": ["string", "null"]
+    },
+    "opType": {
+      "type": ["string", "null"]
+    },
+    "opIndex": {
+      "type": ["integer", "null"]
+    },
+    "recipeHash": {
+      "type": ["string", "null"]
+    },
+    "recipe": {
+      "type": ["object", "array", "null"]
+    },
+    "code": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "repoOwner": {
+          "type": ["string", "null"]
+        },
+        "repoUrl": {
+          "type": ["string", "null"]
+        },
+        "relativePath": {
+          "type": ["string", "null"]
+        },
+        "commit": {
+          "type": ["string", "null"]
+        },
+        "tag": {
+          "type": ["string", "null"]
+        },
+        "branch": {
+          "type": ["string", "null"]
+        },
+        "dirty": {
+          "type": ["boolean", "null"]
+        },
+        "packageVersion": {
+          "type": ["string", "null"]
+        },
+        "authorName": {
+          "type": ["string", "null"]
+        },
+        "authorEmail": {
+          "type": ["string", "null"]
+        },
+        "committerName": {
+          "type": ["string", "null"]
+        },
+        "committerEmail": {
+          "type": ["string", "null"]
+        }
+      }
+    }
+  }
+}
