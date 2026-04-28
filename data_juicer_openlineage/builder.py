@@ -190,6 +190,14 @@ class OpenLineageBuilder:
                     namespace=self._job_namespace(ctx),
                     name=self._pipeline_job_name(ctx),
                 ),
+                root=parent_run.Root(
+                    run=parent_run.RootRun(runId=ctx.run_id),
+                    job=parent_run.RootJob(
+                        namespace=self._job_namespace(ctx),
+                        name=self._pipeline_job_name(ctx),
+                    ),
+                    producer=self.producer,
+                ),
                 producer=self.producer,
             ),
             "datajuicer": DataJuicerRunFacet(
